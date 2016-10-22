@@ -28,7 +28,7 @@ fi
 
 tput clear ; tput bold ; tput setaf 7 ; tput setab 8
 echo "                             "
-echo "   PIA VPN CONNECTION MENU   "
+echo "        VPN COMMANDER        "
 echo "                             "
 tput sgr 0
 echo
