@@ -42,7 +42,7 @@ if [[ $running -ge 1 ]]
    echo
    echo -n "Do you want to $(tput setaf 1)stop$(tput sgr0) the service? [y/n] "; read stop_ans
    case "$stop_ans" in
-     y) echo
+    "y") echo
         echo "Stopping VPN..."
 	kill -9 $pid
 	sleep 2.5
@@ -69,13 +69,13 @@ if [[ $running -ge 1 ]]
          echo "Invalid choice, try again."
          echo
        else
-         pia_loc=$file
+         vpn_conf=$file
          break
        fi
    done
  echo
  echo -n "Starting VPN..."
- $service --config $ovpn_dir/$pia_loc --writepid $pid_file > /dev/null 2>&1 &
+ $service --config $ovpn_dir/$vpn_conf --writepid $pid_file > /dev/null 2>&1 &
  sleep 5
  echo
  echo
