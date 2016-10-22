@@ -1,15 +1,13 @@
-vpn_commander
-=============
+# vpn_commander
+====
 
 vpn_commander is a script for automating the use of openvpn from the command line. The script is meant for use in a headless server environment, or any cli environment.
 
-Setup
------
+#### Setup
 
 Place the `vpn_cmdr.sh` file somewhere in your PATH (`/usr/local/bin` is a good place). Optionally, place the `ipaddr.sh` file in the same location. The `vpn_cmdr.sh` script assumes you have openvpn configuration files (*.conf or *.ovpn) in the `/etc/openvpn` directory. These are used for connecting to the VPN service provider. The `ipaddr.sh` script requires no extra set up.
 
-Usage
------
+#### Usage
 
 As root, type `vpn_cmdr.sh` and you will be presented with one of two screens:
 
