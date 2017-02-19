@@ -1,6 +1,8 @@
 # vpn_commander
 
-vpn_commander is a script for automating the use of openvpn from the command line. The script is meant for use in a headless server environment, or any cli environment.
+vpn_commander is a client-side script for automating the use of openvpn from the command line. The script is meant for use in a headless server environment, or any cli environment.
+
+The point of the script was to create a simple, light-weight way to quickly start up OpenVPN and connect to a VPN server. My examples are built around config files from a specific commercial VPN service, but as long as you place config files in a location the script can get to, you can use any commercial service or your own personal VPN server(s).
 
 #### Setup
 
@@ -23,3 +25,6 @@ Your internet IP address is shown whenever you run `vpn_cmdr.sh`. If you only wa
 
 #### Notes
 This script does not work with other programs or utilities that also interface with OpenVPN. NetworkManager is one such utility. The script will simply fail since NetworkManager both manipulates network connection and can interface with OpenVPN directly. Other programs, such as ConnMan, may operate in a similar manner.
+
+#### To Do
+- [ ] integrate `ipaddr.sh` into tmux status line *(not a critical task, more of a wish list idea)*
