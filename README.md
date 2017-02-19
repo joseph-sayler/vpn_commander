@@ -1,5 +1,4 @@
 # vpn_commander
-====
 
 vpn_commander is a script for automating the use of openvpn from the command line. The script is meant for use in a headless server environment, or any cli environment.
 
@@ -22,3 +21,5 @@ As root, type `vpn_cmdr.sh` and you will be presented with one of two screens:
 Your internet IP address is shown whenever you run `vpn_cmdr.sh`. If you only want to see your IP address, run `ipaddr.sh` and you will be presented with the current local and internet IP addresses without the option to start or stop openvpn.
 
 
+#### Notes
+This script does not work with other programs or utilities that also interface with OpenVPN. NetworkManager is one such utility. The script will simply fail since NetworkManager both manipulates network connection and can interface with OpenVPN directly. Other programs, such as ConnMan, may operate in a similar manner.
