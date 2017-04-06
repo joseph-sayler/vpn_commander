@@ -28,3 +28,4 @@ This script does not work with other programs or utilities that also interface w
 
 #### To Do
 - [ ] integrate `ipaddr.sh` into tmux status line *(not a critical task, more of a wish list idea)*
+- [ ] remove dependency on update-resolv-conf.sh by calling resolvconf directly; the following command removes dns settings for a device - resolvconf -d tun0.inet -- this could also be used to modify resolv.conf (check arch linux wiki for more info)
