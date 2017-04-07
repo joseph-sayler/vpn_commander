@@ -18,6 +18,7 @@ pid=$(cat $pid_file)
 ip_check="icanhazip.com"
 file_list=`find $ovpn_dir/*.conf -type f -printf "%f\n"`
 PS3="Pick a connection or press CTRL+C to exit: "
+net_dev='tun0'
 
 # checks if root
 if [ "$EUID" -ne 0 ]
@@ -45,6 +46,9 @@ if [[ $running -ge 1 ]]
     "y") echo
         echo "Stopping VPN..."
 	kill -9 $pid
+	# the down portion of the update-resolv-conf.sh script does not appear
+	# to be working; use the following to change resolv.conf back to original
+	resolvconf -d $net_dev.inet
 	sleep 2.5
         echo
         echo "VPN is $(tput setab 1)$(tput setaf 18)$(tput bold) DISCONNECTED $(tput sgr0)"
